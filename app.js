@@ -16,9 +16,9 @@ app.set('view engine', 'ejs');
 let urlLink = "";
 
 const posts = [];
-const homeStartingContent = "This is all about home starting content, which wiill be displayed in home page";
-const aboutContent = "About page is a unique page for this blog page where you can find all my social media handles";
-const contactContent = "Sorry about 'AboutPage', actually its here where you can find all the contacts details";
+const homeStartingContent = "Following are some of the blogs, which are so much appreciated by our readers around the world.";
+const aboutContent = "We aim to provide a free platform to all the writers and readers around the globe. So that, they can learn and grow together while taking others in there journey of success.";
+const contactContent = "It's nice seeing you here, drop your query. We will get back on you soon.";
 
 app.get("/", function (req, res) {
     res.render("home", {
@@ -59,6 +59,9 @@ app.get("/contact", function (req, res) {
 });
 app.get("/compose", function (req, res) {
     res.render("compose");
+});
+app.post("/createBlog", function (req, res) {
+    res.redirect("/compose");
 });
 app.post("/compose", function (req, res) {
     const newPost = {

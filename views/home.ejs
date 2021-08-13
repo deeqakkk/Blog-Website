@@ -1,13 +1,21 @@
 <%- include("partials/header") -%>
-<h1>Hello</h1>
+<h1>Trending Blogs</h1>
 <p><%= ejsHomeContent %></p>
 
 <% ejsPosts.forEach(post => { %>
-<h1> <%=  post.postTitle.substring(0, 100)   %> </h1>
-<p> <%=  post.postContent.substring(0, 100) %>...
-   <a value="" class="read-more" href="/posts/<%=post.postTitle%>"> Read More</a>
- </p>
+<div class="jumbotron btn-info">
+  <h2><%=  post.postTitle.substring(0, 100)   %> </h2>
 
-<%});%>
+  <p> <%=  post.postContent.substring(0, 100) %>...
+    <p><a class="btn btn-primary" href="/posts/<%=post.postTitle%>" role="button">Read more</a></p>
+  </p>
+</div>
+  <%});%>
+
+
+
+<form method="POST" action="/createBlog">
+  <button type="sumbit" class="btn btn-danger btn-lg btn-create" name="button" value="create-button">Write a Blog📝</button>
+</form>
 
 <%- include("partials/footer") -%>
