@@ -21,7 +21,7 @@ const homeStartingContent = "Following are some of the blogs, which are so much 
 const aboutContent = "We aim to provide a free platform to all the writers and readers around the globe. So that, they can learn and grow together while taking others in there journey of success.";
 const contactContent = "It's nice seeing you here, drop your query. We will get back on you soon.";
 
-mongoose.connect('mongodb+srv://deeqakkk:'+mongo_password+'@blogwebsite.sycan.mongodb.net/daily-journal', {
+mongoose.connect('mongodb+srv://deeqakkk:deepak123@blogwebsite.sycan.mongodb.net/daily-journal', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
